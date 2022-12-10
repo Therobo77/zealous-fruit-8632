@@ -9,31 +9,31 @@ Sephora is a French multinational retailer of personal care and beauty products.
 # Collaborators
 
 
-# 🧔🏻 **Ujjwal Singh** `Sargana`
+# 🧔🏻 **Vikash Kumar Lal** `Team Lead`
 
 - Github:[@ujjwal](https://github.com/ujjwalsingh13feb)
 - Linkedin:[Ujjwal Singh]()
 - Email: (patilsanket209@gmail.com)
 
-# 👨🏻 **Mehfooz Khan** 
+# 👨🏻 **Aman Singh Rajawat** 
 
 - Github: [@mehfooz](https://github.com/mehfoozkhangithub)
 - Linkedin: [Mehfooz Khan](https://www.linkedin.com/in/mehfoozkhan51/)
 - Email: (mehfoozshaik51@gmail.com)
 
-# 🧑🏻‍🦰 **Vikash Lal**
+# 🧑🏻‍🦰 **Shobha Malviya**
 
 - Github:[@Vikash](https://github.com/mdali-11)
 - Linkedin: [Vikash Lal](https://www.linkedin.com/in/md-ali11/)
 - Email: (mdali91935@gmail.com)
 
-# 👱🏻‍♂️ **Rahul Ohol**
+# 👱🏻‍♂️ **Rajnandani Kumari**
 
 - Github:[@rahul](https://github.com/Srahul2244)
 - Linkedin:[Rahul Ohol](https://www.linkedin.com/in/rahul-singh-17b20a1b4/)
 - Email: (ranafd9984@gmail.com)
 
-# 🧑🏻 **Satayam Yadav**
+# 🧑🏻 **Nitesh Sindhu**
 
 - Github: [@ashish](https://github.com/abajaj655)
 - Linkedin: [Ashish Bajaj](https://www.linkedin.com/in/ashish-bajaj-7299a3235/)
