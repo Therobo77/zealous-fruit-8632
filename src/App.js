@@ -8,7 +8,7 @@ function App() {
     <h1>Project Code :zealous-fruit-8632</h1>
     <h1>Stay Connected</h1>
 
-    <h4>
+    <h1>
     # zealous-fruit-8632  `Project Code`
 
 ## About Project 
@@ -50,7 +50,7 @@ Sephora is a French multinational retailer of personal care and beauty products.
 - Linkedin:[Vikash Lal](https://www.linkedin.com/in/vikashlal7722/)
 - Email: (anshusinha8873@gmail.com)
 
-    </h4>
+    </h1>
     </div>
   );
 }
