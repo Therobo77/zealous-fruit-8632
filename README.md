@@ -23,8 +23,8 @@ Sephora is a French multinational retailer of personal care and beauty products.
 
 # 👨🏻 **Aman Singh Rajawat** 
 
-- Github:[@Aman Singh Rajawat](https://github.com/amansingh456)
-- Linkedin:[Aman Singh Rajawat](https://www.linkedin.com/in/aman690/)
+- Github:[@amansingh456](https://github.com/amansingh456)
+- Linkedin:[aman690](https://www.linkedin.com/in/aman690/)
 - Email: (amansinghrajawat690@gmail.com)
 
 # 🧑🏻‍🦰 **Shobha Malviya**
