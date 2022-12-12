@@ -29,9 +29,9 @@ Sephora is a French multinational retailer of personal care and beauty products.
 
 # 🧑🏻‍🦰 **Shobha Malviya**
 
-- Github:[@Vikash](https://github.com/Therobo77)
-- Linkedin:[Vikash Lal](https://www.linkedin.com/in/vikashlal7722/)
-- Email: (anshusinha8873@gmail.com)
+- Github:[@Shobha](https://github.com/shobhamalviya)
+- Linkedin:[Shobha Malviya](www.linkedin.com/in/shobha-malviya-24bb311a4)
+- Email: [shobhamalviya5798@gmail.com)
 
 # 👱🏻‍♂️ **Rajnandani Kumari**
 
