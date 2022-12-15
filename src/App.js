@@ -1,4 +1,5 @@
 import "./App.css";
+import login from './Components/Login/Login';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           lotions and haircare
         </span>
       </h1>
+      <login/>
     </div>
   );
 }
