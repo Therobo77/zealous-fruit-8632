@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {Button} from "@chakra-ui/react"
-import Login from './Login/Login'
+import Login from './Login'
 
 export const Temp = () => {
   
