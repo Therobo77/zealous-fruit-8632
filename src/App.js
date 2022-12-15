@@ -1,8 +1,10 @@
 import "./App.css";
+import Admin from "./Nitesh/Nitesh/Admin";
 
 function App() {
   return (
     <div className="App">
+      <Admin/>
       <h1>Work in progress !</h1>
       <h1>Project Code :zealous-fruit-8632</h1>
       <h1>Stay Connected</h1>
