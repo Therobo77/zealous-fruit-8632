@@ -1,10 +1,9 @@
 import "./App.css";
-import login from './Components/Login/Login';
-
+import {Temp} from "./Components/temp";
 function App() {
   return (
     <div className="App">
-      <h1>Work in progress !</h1>
+      {/* <h1>Work in progress !</h1>
       <h1>Project Code :zealous-fruit-8632</h1>
       <h1>Stay Connected</h1>
 
@@ -18,8 +17,9 @@ function App() {
           cosmetics, skincare, body, fragrance, nail color, beauty tools, body
           lotions and haircare
         </span>
-      </h1>
-      <login/>
+      </h1> */}
+      {/* <login/> */}
+      <Temp/>
     </div>
   );
 }
