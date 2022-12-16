@@ -1,0 +1,354 @@
+.page {
+    width: 100%;
+  }
+  
+  .title {
+    height: 47px;
+  
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 10%;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-family: Avenir-NextRegular, sans-serif, "Avenir-NextRegular";
+    font-weight: 700;
+  }
+  
+  .checkout {
+    height: 47px;
+    display: flex;
+    /* justify-content: space-between; */
+    box-sizing: border-box;
+    padding: 0 10%;
+    align-items: center;
+    background-color: rgb(67, 156, 244);
+    color: white;
+    font-family: Avenir-NextBold, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  
+  .checkout div:first-child {
+    margin-right: 40%;
+  }
+  .checkout div:last-child {
+    font-size: 16px;
+  }
+  
+  .paymentdiv {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    gap: 5%;
+  }
+  
+  /* LEFTDIV */
+  .leftdiv {
+    width: 63%;
+    height: 500px;
+    padding-left: 10px;
+  }
+  
+  .leftdiv h5 > img {
+    height: 22px;
+    width: 22px;
+    object-fit: contain;
+    margin-top: 0px;
+  }
+  
+  .leftdiv > div:first-child {
+    width: 60%;
+    height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Avenir-NextBold, sans-serif;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .leftdiv div > h5 {
+    display: flex;
+    place-items: center;
+  }
+  
+  .methods {
+    border-bottom: 1px solid rgb(168, 166, 166);
+    display: flex;
+    justify-content: flex-start;
+    height: 47px;
+    align-items: center;
+    gap: 10px;
+    font-family: Avenir-NextBold, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 5px;
+    margin-top: -28px;
+  }
+  
+  .methods img {
+    height: 15px;
+    width: 15px;
+    object-fit: contain;
+  }
+  
+  .radiodiv div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    font-family: Avenir-NextRegular, sans-serif, "Avenir-NextRegular";
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: -10px;
+  }
+  .radiodiv input {
+    height: 15px;
+    width: 15px;
+    color: black;
+  }
+  
+  span {
+    margin-left: 10px;
+    color: red;
+    font-family: Avenir-NextRegular, sans-serif, "Avenir-NextRegular";
+    font-size: 14px;
+  }
+  /* RIGHTSIDE */
+  .rightdiv {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .totaldiv {
+    height: 280px;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    padding: 10px 40px;
+  }
+  .totaldiv h3 {
+    font-family: Avenir-NextBold, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 0px;
+    margin-left: -3px;
+  }
+  .totaldiv div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -12px;
+  }
+  
+  .totaldiv div p {
+    font-family: Avenir-NextRegular, sans-serif, "Avenir-NextRegular";
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+  
+  .totaldiv div:last-child {
+    margin-top: 15px;
+    border-top: 1px solid rgb(7, 7, 7);
+  }
+  
+  .totaldiv div:last-child p {
+    font-family: Avenir-NextBold, sans-serif;
+    font-size: 15px;
+  }
+  
+  .discount {
+    font-family: Avenir-NextBold, sans-serif;
+    font-size: 15px;
+    color: deeppink;
+  }
+  
+  .rightdiv > div:last-child {
+    margin-top: 15px;
+    height: 50px;
+  }
+  .rightdiv button {
+    width: 100%;
+    height: 58px;
+    border: none;
+    background-color: deeppink;
+    color: white;
+    font-family: Avenir-NextBold, sans-serif;
+    font-size: 16px;
+  }
+  /* METHODSSSSS */
+  
+  .creditcard {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 250px;
+    margin-left: 30px;
+  }
+  
+  .creditcard > div {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .creditcard > div p {
+    font-family: Avenir-NextRegular, sans-serif, "Avenir-NextRegular";
+    font-size: 14px;
+    margin-bottom: -8px;
+  }
+  
+  .creditcard > div input {
+    width: 65%;
+    height: 35px;
+    border: 1px solid gray;
+  }
+  
+  .creditcard > div:nth-child(3) {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2px;
+    margin-top: 5px;
+  }
+  
+  .creditcard > div:nth-child(3) input {
+    width: 20%;
+    border: 1px solid gray;
+  }
+  
+  .creditcard > div:nth-child(4) {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .creditcard > div:nth-child(4) input {
+    width: 20%;
+    border: 1px solid gray;
+  }
+  
+  /* NETBANKING */
+  
+  .netbanking {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .netbanking > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 10px;
+  }
+  
+  .netbanking > div > p {
+    text-align: left;
+    margin-bottom: -1px;
+  }
+  
+  .bankimages {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  .bankimages div {
+    border: 1px solid black;
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
+  
+  .allbanks {
+    margin-top: 20px;
+    margin-left: -50%;
+    width: 50%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+  }
+  
+  .allbanks p {
+    font-family: Avenir-NextRegular, sans-serif, "Avenir-NextRegular";
+    font-size: 14px;
+    margin-bottom: -1px;
+    text-align: left;
+    margin-left: -78%;
+  }
+  .allbanks select {
+    width: 70%;
+    height: 50px;
+    margin-left: -26%;
+    border: 1px solid gray;
+  }
+  
+  /* PAYTM */
+  .paytm {
+    margin-left: 30px;
+    height: 100px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .paytm div {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: Avenir-NextRegular, sans-serif, "Avenir-NextRegular";
+    font-size: 14px;
+    padding-right: 15px;
+  }
+  
+  .paytm div:first-child {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .paytm div:last-child {
+    height: 40px;
+  }
+  
+  .paytm div:last-child input {
+    width: 70%;
+    height: 90%;
+    border: 1px solid gray;
+  }
+  
+  .paytm div:last-child button {
+    height: 100%;
+    border: 2px solid gray;
+    width: 30%;
+    color: gray;
+    font-family: Avenir-NextBold, sans-serif;
+    font-size: 14px;
+  }
+  
+  .paytm span {
+    color: deeppink;
+  }
+  
+  .radiodiv > div > p {
+    cursor: pointer;
+  }
+  
