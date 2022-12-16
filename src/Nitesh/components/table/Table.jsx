@@ -1,4 +1,4 @@
-import "./table.scss";
+import Styles from "./table.module.css";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -61,35 +61,35 @@ const List = () => {
     },
   ];
   return (
-    <TableContainer component={Paper} className="table">
+    <TableContainer component={Paper} className={Styles.table}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell className="tableCell">Tracking ID</TableCell>
-            <TableCell className="tableCell">Product</TableCell>
-            <TableCell className="tableCell">Customer</TableCell>
-            <TableCell className="tableCell">Date</TableCell>
-            <TableCell className="tableCell">Amount</TableCell>
-            <TableCell className="tableCell">Payment Method</TableCell>
-            <TableCell className="tableCell">Status</TableCell>
+            <TableCell className={Styles.tableCell}>Tracking ID</TableCell>
+            <TableCell className={Styles.tableCell}>Product</TableCell>
+            <TableCell className={Styles.tableCell}>Customer</TableCell>
+            <TableCell className={Styles.tableCell}>Date</TableCell>
+            <TableCell className={Styles.tableCell}>Amount</TableCell>
+            <TableCell className={Styles.tableCell}>Payment Method</TableCell>
+            <TableCell className={Styles.tableCell}>Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
-              <TableCell className="tableCell">{row.id}</TableCell>
-              <TableCell className="tableCell">
-                <div className="cellWrapper">
-                  <img src={row.img} alt="" className="image" />
+              <TableCell className={Styles.tableCell}>{row.id}</TableCell>
+              <TableCell className={Styles.tableCell}>
+                <div className={Styles.cellWrapper}>
+                  <img src={row.img} alt="" className={Styles.image} />
                   {row.product}
                 </div>
               </TableCell>
-              <TableCell className="tableCell">{row.customer}</TableCell>
-              <TableCell className="tableCell">{row.date}</TableCell>
-              <TableCell className="tableCell">{row.amount}</TableCell>
-              <TableCell className="tableCell">{row.method}</TableCell>
-              <TableCell className="tableCell">
-                <span className={`status ${row.status}`}>{row.status}</span>
+              <TableCell className={Styles.tableCell}>{row.customer}</TableCell>
+              <TableCell className={Styles.tableCell}>{row.date}</TableCell>
+              <TableCell className={Styles.tableCell}>{row.amount}</TableCell>
+              <TableCell className={Styles.tableCell}>{row.method}</TableCell>
+              <TableCell className={Styles.tableCell}>
+                <span className={`${Styles.status} ${row.status}`}>{row.status}</span>
               </TableCell>
             </TableRow>
           ))}

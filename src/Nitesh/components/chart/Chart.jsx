@@ -1,4 +1,4 @@
-import "./chart.scss";
+import Styles from "./Chart.module.css";
 import {
   AreaChart,
   Area,
@@ -19,8 +19,8 @@ const data = [
 
 const Chart = ({ aspect, title }) => {
   return (
-    <div className="chart">
-      <div className="title">{title}</div>
+    <div className={Styles.chart}>
+      <div className={Styles.title}>{title}</div>
       <ResponsiveContainer width="100%" aspect={aspect}>
         <AreaChart
           width={730}
@@ -35,7 +35,7 @@ const Chart = ({ aspect, title }) => {
             </linearGradient>
           </defs>
           <XAxis dataKey="name" stroke="gray" />
-          <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
+          <CartesianGrid strokeDasharray="3 3" className={Styles.chartGrid} />
           <Tooltip />
           <Area
             type="monotone"

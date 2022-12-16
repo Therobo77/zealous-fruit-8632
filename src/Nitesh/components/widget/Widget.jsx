@@ -1,7 +1,7 @@
-import "./widget.scss";
+import Styles from "./widget.module.css";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardCapslockIcon from '@mui/icons-material/KeyboardCapslock';
+import KeyboardCapslockIcon from "@mui/icons-material/KeyboardCapslock";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -23,12 +23,12 @@ const Widget = ({ type }) => {
     case "user":
       data = {
         title: "USERS",
-        query:"users",
+        query: "users",
         isMoney: false,
         link: "See all users",
         icon: (
           <PersonOutlinedIcon
-            className="icon"
+            className={Styles.icon}
             style={{
               color: "crimson",
               backgroundColor: "rgba(255, 0, 0, 0.2)",
@@ -41,11 +41,11 @@ const Widget = ({ type }) => {
       data = {
         title: "ORDERS",
         isMoney: false,
-        query:"orders",
+        query: "orders",
         link: "View all orders",
         icon: (
           <ShoppingCartOutlinedIcon
-            className="icon"
+            className={Styles.icon}
             style={{
               backgroundColor: "rgba(218, 165, 32, 0.2)",
               color: "goldenrod",
@@ -57,12 +57,12 @@ const Widget = ({ type }) => {
     case "earning":
       data = {
         title: "EARNINGS",
-        query:"earning",
+        query: "earning",
         isMoney: true,
         link: "View net earnings",
         icon: (
           <MonetizationOnOutlinedIcon
-            className="icon"
+            className={Styles.icon}
             style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
           />
         ),
@@ -71,12 +71,12 @@ const Widget = ({ type }) => {
     case "products":
       data = {
         title: "PRODUTS",
-        query:"products",
+        query: "products",
         isMoney: true,
         link: "See details",
         icon: (
           <AccountBalanceWalletOutlinedIcon
-            className="icon"
+            className={Styles.icon}
             style={{
               backgroundColor: "rgba(128, 0, 128, 0.2)",
               color: "purple",
@@ -107,26 +107,37 @@ const Widget = ({ type }) => {
       const LastMonthData = await getDocs(lastMonthQuery);
       const PrevMonthData = await getDocs(prevMonthQuery);
       setAmount(LastMonthData.docs.length);
-      console.log(PrevMonthData.docs.length);
-      // console.log(PrevMonthData.docs);
-      setDiff(((LastMonthData.docs.length-PrevMonthData.docs.length)/PrevMonthData.docs.length)*100)
-
+      let valuetotal =
+        ((LastMonthData.docs.length - PrevMonthData.docs.length) /
+          PrevMonthData.docs.length) *
+        100;
+      if (valuetotal === Infinity) valuetotal = 0;
+      setDiff(valuetotal);
     };
     fectchData();
   }, []);
   return (
-    <div className="widget">
-      <div className="left">
-        <span className="title">{data.title}</span>
-        <span className="counter">
+    <div className={Styles.widget}>
+      <div className={Styles.left}>
+        <span className={Styles.title}>{data.title}</span>
+        <span className={Styles.counter}>
           {data.isMoney && "$"} {amount}
         </span>
-        <span className="link">{data.link}</span>
+        <span className={Styles.link}>{data.link}</span>
       </div>
-      <div className="right">
-        <div className={`percentage ${diff < 0 ? "negative" : "positive"}`}>
-          {diff<0? <KeyboardArrowDownIcon/>:diff===0 ?<KeyboardCapslockIcon/>:<KeyboardArrowUpIcon/>}
-          {/* <KeyboardArrowUpIcon /> */}
+      <div className={Styles.right}>
+        <div
+          className={`${Styles.percentage} ${
+            diff < 0 ? Styles.negative : Styles.positive
+          }`}
+        >
+          {diff < 0 ? (
+            <KeyboardArrowDownIcon />
+          ) : diff === 0 ? (
+            <KeyboardCapslockIcon />
+          ) : (
+            <KeyboardArrowUpIcon />
+          )}
           {diff} %
         </div>
         {data.icon}

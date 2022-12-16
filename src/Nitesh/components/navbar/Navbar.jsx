@@ -1,4 +1,4 @@
-import "./navbar.scss";
+import Styles from "./navbar.module.css";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -13,42 +13,42 @@ const Navbar = () => {
   const { dispatch } = useContext(DarkModeContext);
 
   return (
-    <div className="navbar">
-      <div className="wrapper">
-        <div className="search">
+    <div className={Styles.navbar}>
+      <div className={Styles.wrapper}>
+        <div className={Styles.search}>
           <input type="text" placeholder="Search..." />
           <SearchOutlinedIcon />
         </div>
-        <div className="items">
-          <div className="item">
-            <LanguageOutlinedIcon className="icon" />
+        <div className={Styles.items}>
+          <div className={Styles.item}>
+            <LanguageOutlinedIcon className={Styles.icon} />
             English
           </div>
-          <div className="item">
+          <div className={Styles.item}>
             <DarkModeOutlinedIcon
-              className="icon"
+              className={Styles.icon}
               onClick={() => dispatch({ type: "TOGGLE" })}
             />
           </div>
-          <div className="item">
-            <FullscreenExitOutlinedIcon className="icon" />
+          <div className={Styles.item}>
+            <FullscreenExitOutlinedIcon className={Styles.icon} />
           </div>
-          <div className="item">
-            <NotificationsNoneOutlinedIcon className="icon" />
-            <div className="counter">1</div>
+          <div className={Styles.item}>
+            <NotificationsNoneOutlinedIcon className={Styles.icon} />
+            <div className={Styles.counter}>1</div>
           </div>
-          <div className="item">
-            <ChatBubbleOutlineOutlinedIcon className="icon" />
-            <div className="counter">2</div>
+          <div className={Styles.item}>
+            <ChatBubbleOutlineOutlinedIcon className={Styles.icon} />
+            <div className={Styles.counter}>2</div>
           </div>
-          <div className="item">
-            <ListOutlinedIcon className="icon" />
+          <div className={Styles.item}>
+            <ListOutlinedIcon className={Styles.icon} />
           </div>
-          <div className="item">
+          <div className={Styles.item}>
             <img
               src="https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
               alt=""
-              className="avatar"
+              className={Styles.avatar}
             />
           </div>
         </div>

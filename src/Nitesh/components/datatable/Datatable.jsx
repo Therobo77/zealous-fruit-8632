@@ -1,6 +1,6 @@
-import "./datatable.scss";
+import Styles from "./datatable.module.css";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows,productsColumns } from "../../datatablesource";
+import { userColumns, userRows, productsColumns } from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
@@ -16,26 +16,9 @@ const Datatable = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // const fectchData = async () => {
-    //   let list = [];
-    //   try {
-    //     const querySnapshot = await getDocs(collection(db, "users"));
-    //     querySnapshot.forEach((doc) => {
-    //       list.push({id:doc.id,...doc.data()});
-    //       // console.log(doc.id, "=>", doc.data());
-    //     });
-    //     setData(list);
-    //     // console.log(list)
-    //   } catch (err) {
-    //     console.log(err);
-    //   }
-    // };
-    // fectchData();
     const unsub = onSnapshot(
       collection(db, "users"),
       (snapshot) => {
-        // const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
-        // console.log(source, " data: ", doc.data());
         let list = [];
         snapshot.forEach((doc) => list.push({ id: doc.id, ...doc.data() }));
         setData(list);
@@ -48,7 +31,6 @@ const Datatable = () => {
       unsub();
     };
   }, []);
-  console.log(data);
   const handleDelete = async (id) => {
     try {
       await deleteDoc(doc(db, "users", id));
@@ -65,12 +47,12 @@ const Datatable = () => {
       width: 200,
       renderCell: (params) => {
         return (
-          <div className="cellAction">
+          <div className={Styles.cellAction}>
             <Link to="/users/test" style={{ textDecoration: "none" }}>
-              <div className="viewButton">View</div>
+              <div className={Styles.viewButton}>View</div>
             </Link>
             <div
-              className="deleteButton"
+              className={Styles.deleteButton}
               onClick={() => handleDelete(params.row.id)}
             >
               Delete
@@ -81,15 +63,15 @@ const Datatable = () => {
     },
   ];
   return (
-    <div className="datatable">
-      <div className="datatableTitle">
+    <div className={Styles.datatable}>
+      <div className={Styles.datatableTitle}>
         Add New User
-        <Link to="/users/new" className="link">
+        <Link to="/users/new" className={Styles.link}>
           Add New
         </Link>
       </div>
       <DataGrid
-        className="datagrid"
+        className={Styles.datagrid}
         rows={data}
         columns={userColumns.concat(actionColumn)}
         pageSize={9}
