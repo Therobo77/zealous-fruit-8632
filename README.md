@@ -43,6 +43,7 @@ Sephora is a French multinational retailer of personal care and beauty products.
 
 # 🧑🏻 **Nitesh Sindhu**
 
+<<<<<<< HEAD
 - Github:[@NiteshSindhu](https://github.com/NiteshSindhu)
 - Linkedin:[Nitesh Sindhu](https://www.linkedin.com/in/nitesh-sindhu-150473203/)
 - Email: (niteshsindhu1435@gmail.com)
@@ -50,3 +51,8 @@ Sephora is a French multinational retailer of personal care and beauty products.
 - Linkedin:[Vikash Lal](https://www.linkedin.com/in/)
 - Email: [Email](anshusinha8873@gmail.com)
 >>>>>>> 768b57c20aab7eb2487260925c70defc8ab97ab4 -->
+=======
+- Github:[@Vikash](https://github.com/)
+- Linkedin:[Vikash Lal](https://www.linkedin.com/in/)
+- Email: [Email](anshusinha8873@gmail.com)
+>>>>>>> 07e98bc4db99803d9a21d30d0f4de11aa34fbe9d
