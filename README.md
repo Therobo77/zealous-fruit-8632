@@ -1,5 +1,7 @@
 # zealous-fruit-8632  `Project Code`
 
+# Robos oF Glossity
+
 ## About Project 
 <h2>
 Sephora is a French multinational retailer of personal care and beauty products. Featuring nearly 340 brands, along with its own private label, Sephora Collection, Sephora offers beauty products including cosmetics, skincare, body, fragrance, nail color, beauty tools, body lotions and haircare
@@ -12,7 +14,7 @@ Sephora is a French multinational retailer of personal care and beauty products.
 
 - Github:[@Vikash](https://github.com/Therobo77)
 - Linkedin:[Vikash Lal](https://www.linkedin.com/in/vikashlal7722/)
-- Email: (anshusinha8873@gmail.com)
+- Email: [G-mail](anshusinha8873@gmail.com)
 
 
 # 🧔🏻 **Vikash Kumar Lal** `Team Lead`
@@ -31,16 +33,20 @@ Sephora is a French multinational retailer of personal care and beauty products.
 
 - Github:[@Shobha](https://github.com/shobhamalviya)
 - Linkedin:[Shobha Malviya](https://www.linkedin.com/in/shobha-malviya-24bb311a4/)
-- Email: [shobhamalviya5798@gmail.com)
+- Email: (shobhamalviya5798@gmail.com)
 
 # 👱🏻‍♂️ **Rajnandani Kumari**
 
-- Github:[@Vikash](https://github.com/Therobo77)
-- Linkedin:[Vikash Lal](https://www.linkedin.com/in/vikashlal7722/)
-- Email: (anshusinha8873@gmail.com)
+- Github:[@Rajnandani](https://github.com/Raj210Kumari)
+- Linkedin:[Rajnandani Kumari](https://www.linkedin.com/in/k-rajnandani210/)
+- Email: (rajnandani02101997@gmail.com)
 
 # 🧑🏻 **Nitesh Sindhu**
 
 - Github:[@NiteshSindhu](https://github.com/NiteshSindhu)
 - Linkedin:[Nitesh Sindhu](https://www.linkedin.com/in/nitesh-sindhu-150473203/)
 - Email: (niteshsindhu1435@gmail.com)
+<!-- - Github:[@Vikash](https://github.com/)
+- Linkedin:[Vikash Lal](https://www.linkedin.com/in/)
+- Email: [Email](anshusinha8873@gmail.com)
+>>>>>>> 768b57c20aab7eb2487260925c70defc8ab97ab4 -->

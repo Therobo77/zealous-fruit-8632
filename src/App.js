@@ -1,5 +1,4 @@
 import "./App.css";
-import Login from "./Components/Login";
 import Admin from "./Nitesh/Nitesh/Admin";
 
 function App() {
