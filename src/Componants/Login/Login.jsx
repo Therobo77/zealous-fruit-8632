@@ -110,7 +110,7 @@ export const Login = () => {
           cookiePolicy={"single_host_origin"}
         /></p>
         <br></br>
-        <FacebookLogin
+        {/* <FacebookLogin
           appId="'{app-id}'"
           autoLoad={false}
           fields="name,email,picture"
@@ -120,7 +120,7 @@ export const Login = () => {
           icon="fa-facebook"
           textButton="Login with Facebook"
           style={{ backgroundColor: "rgb(25,118,210)" }}
-        />
+        /> */}
         <p>By proceeding, you agree to Privacy Policy, <span style={{ color: "rgb(255,51,153)" }} >Terms & Conditions</span></p>
     </div>
       </div>
