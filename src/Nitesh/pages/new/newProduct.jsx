@@ -4,27 +4,27 @@ import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useEffect, useState } from "react";
 import {
-  addDoc,
-  collection,
-  doc,
-  serverTimestamp,
-  setDoc,
+    collection,
 } from "firebase/firestore";
-import { auth, db, storage } from "../../firebase";
+import {db, storage } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { Postdata } from "../../Actions/allactions";
 
-const New = ({ inputs, title }) => {
+
+
+const NewProduct = ({ inputs, title }) => {
   const [file, setFile] = useState("");
   const [data, setData] = useState({});
   const [prec, setPrecs] = useState(null);
+  const userCollectiontionRef = collection(db, "products");
   const navigate = useNavigate();
 
   useEffect(() => {
     const uploadFile = () => {
       const name = new Date().getTime() + file.name;
       const storageRef = ref(storage, name);
+
       const uploadTask = uploadBytesResumable(storageRef, file);
       uploadTask.on(
         "state_changed",
@@ -59,25 +59,15 @@ const New = ({ inputs, title }) => {
     };
     file && uploadFile();
   }, [file]);
-  const handleAdd = async (e) => {
+  const handleAdd = (e) => {
     e.preventDefault();
-    try {
-      const res = await createUserWithEmailAndPassword(
-        auth,
-        data.email,
-        data.password
-      );
-      await setDoc(doc(db, "users", res.user.uid), {
-        ...data,
-        timeStamp: serverTimestamp(),
-      });
-      navigate(-1);
-    } catch (err) {
-      console.log(err);
-    }
+    // console.log(data);
+    Postdata(data, userCollectiontionRef);
+    navigate(-1);
+   
   };
   const handleInput = (e) => {
-    const id = e.target.id;
+    const id = e.target.name;
     const value = e.target.value;
     setData({ ...data, [id]: value });
   };
@@ -120,6 +110,7 @@ const New = ({ inputs, title }) => {
                   <input
                     type={input.type}
                     id={input.id}
+                    name={input.name}
                     placeholder={input.placeholder}
                     onChange={handleInput}
                   />
@@ -134,4 +125,4 @@ const New = ({ inputs, title }) => {
   );
 };
 
-export default New;
+export default NewProduct;

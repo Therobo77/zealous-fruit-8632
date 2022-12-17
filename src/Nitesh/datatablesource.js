@@ -1,3 +1,6 @@
+import { Avatar } from "@mui/material";
+import "./databl.css";
+
 export const userColumns = [
   { field: "id", headerName: "ID", width: 70 },
   {
@@ -7,7 +10,7 @@ export const userColumns = [
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
-          <img className="cellImg" src={params.row.img} alt="avatar" />
+          <Avatar className="cellImg" src={params.row.img} alt="avatar" />
           {params.row.username}
         </div>
       );
@@ -43,26 +46,27 @@ export const productsColumns = [
     field: "Product",
     headerName: "Product",
     width: 230,
+    editable: true,
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
-          <img className="cellImg" src={params.row.img} alt="avatar" />
-          {params.row.username}
+          <Avatar className="cellImg" src={params.row.img} alt="avatar" />
+          {params.row.title}
         </div>
       );
     },
   },
-  {
-    field: "email",
-    headerName: "Email",
-    width: 230,
-  },
+  // {
+  //   field: "email",
+  //   headerName: "Email",
+  //   width: 230,
+  // },
 
-  {
-    field: "address",
-    headerName: "Address",
-    width: 100,
-  },
+  // {
+  //   field: "address",
+  //   headerName: "Address",
+  //   width: 100,
+  // },
   {
     field: "status",
     headerName: "Status",
@@ -72,10 +76,46 @@ export const productsColumns = [
         <div className={`cellWithStatus ${params.row.status}`}>
           {params.row.status}
         </div>
+      )
+    }
+  },
+  {
+    field: "Price",
+    headerName: "Price",
+    width: 160,
+    renderCell: (params) => {
+      return (
+        <div className={`cellWithStatus ${params.row.status}`}>
+          {params.row.price}
+        </div>
       );
     },
   },
-];
+  {
+    field: "Category",
+    headerName: "Category",
+    width: 160,
+    renderCell: (params) => {
+      return (
+        <div className={`cellWithStatus ${params.row.status}`}>
+          {params.row.category}
+        </div>
+      );
+    },
+  },
+  {
+    field: "Stock",
+    headerName: "Stock",
+    width: 160,
+    renderCell: (params) => {
+      return (
+        <div className={`cellWithStatus ${params.row.stock>0?"instock":"outstok"}`}>
+          {params.row.stock>0?"In Stock":"Out of Stock"}
+        </div>
+      );
+    },
+  }
+]
 
 
 //temporary data

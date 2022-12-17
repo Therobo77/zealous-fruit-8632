@@ -1,28 +1,22 @@
 import Styles from "./datatable.module.css";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, } from "../../datatablesource";
+import { productsColumns } from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import {
-  collection,
-  getDocs,
-  deleteDoc,
-  doc,
-  onSnapshot,
-} from "firebase/firestore";
+import { collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
 
-const Datatable = () => {
+const ProductDatatable = () => {
   const [data, setData] = useState([]);
+  const userCollectiontionRef = collection(db, "products");
 
   useEffect(() => {
     const unsub = onSnapshot(
-      collection(db, "users"),
+      collection(db, "products"),
       (snapshot) => {
         let list = [];
         snapshot.forEach((doc) => list.push({ id: doc.id, ...doc.data() }));
         setData(list);
-        console.log(list);
       },
       (err) => {
         console.log(err);
@@ -34,7 +28,7 @@ const Datatable = () => {
   }, []);
   const handleDelete = async (id) => {
     try {
-      await deleteDoc(doc(db, "users", id));
+      await deleteDoc(doc(db, "products", id));
     } catch (err) {
       console.log(err);
     }
@@ -49,7 +43,7 @@ const Datatable = () => {
       renderCell: (params) => {
         return (
           <div className={Styles.cellAction}>
-            <Link to="/users/test" style={{ textDecoration: "none" }}>
+            <Link to="/products/test" style={{ textDecoration: "none" }}>
               <div className={Styles.viewButton}>View</div>
             </Link>
             <div
@@ -66,15 +60,15 @@ const Datatable = () => {
   return (
     <div className={Styles.datatable}>
       <div className={Styles.datatableTitle}>
-        Add New User
-        <Link to="/users/new" className={Styles.link}>
+        Add New Product
+        <Link to="/products/newProduct" className={Styles.link}>
           Add New
         </Link>
       </div>
       <DataGrid
         className={Styles.datagrid}
         rows={data}
-        columns={userColumns.concat(actionColumn)}
+        columns={productsColumns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection
@@ -83,4 +77,4 @@ const Datatable = () => {
   );
 };
 
-export default Datatable;
+export default ProductDatatable;

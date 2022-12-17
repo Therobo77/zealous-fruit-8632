@@ -1,4 +1,4 @@
-import Sytles from "./sidebar.module.css";
+import Styles from "./sidebar.module.css";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
@@ -14,85 +14,88 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
+import { LogoutUser } from "../../Actions/allactions";
 
 const Sidebar = () => {
-  const { dispatch } = useContext(DarkModeContext);
+  const { dispatch,darkMode } = useContext(DarkModeContext);
   return (
-    <div className={Sytles.sidebar}>
-      <div className={Sytles.top}>
+    <div className={darkMode ? `${Styles.sidebar} ${Styles.dark}` : Styles.sidebar}>
+      <div className={Styles.top}>
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className={Sytles.logo}>Nitesh Sindhu</span>
+          <span className={Styles.logo}>Nitesh Sindhu</span>
         </Link>
       </div>
       <hr />
-      <div className={Sytles.center}>
+      <div className={Styles.center}>
         <ul>
-          <p className={Sytles.title}>MAIN</p>
+          <p className={Styles.title}>MAIN</p>
           <li>
-            <DashboardIcon className={Sytles.icon} />
-            <span>Dashboard</span>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <DashboardIcon className={Styles.icon} />
+              <span>Dashboard</span>
+            </Link>
           </li>
-          <p className={Sytles.title}>LISTS</p>
+          <p className={Styles.title}>LISTS</p>
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
-              <PersonOutlineIcon className={Sytles.icon} />
+              <PersonOutlineIcon className={Styles.icon} />
               <span>Users</span>
             </li>
           </Link>
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
-              <StoreIcon className={Sytles.icon} />
+              <StoreIcon className={Styles.icon} />
               <span>Products</span>
             </li>
           </Link>
           <li>
-            <CreditCardIcon className={Sytles.icon} />
+            <CreditCardIcon className={Styles.icon} />
             <span>Orders</span>
           </li>
           <li>
-            <LocalShippingIcon className={Sytles.icon} />
+            <LocalShippingIcon className={Styles.icon} />
             <span>Delivery</span>
           </li>
-          <p className={Sytles.title}>USEFUL</p>
+          <p className={Styles.title}>USEFUL</p>
           <li>
-            <InsertChartIcon className={Sytles.icon} />
+            <InsertChartIcon className={Styles.icon} />
             <span>Stats</span>
           </li>
           <li>
-            <NotificationsNoneIcon className={Sytles.icon} />
+            <NotificationsNoneIcon className={Styles.icon} />
             <span>Notifications</span>
           </li>
-          <p className={Sytles.title}>SERVICE</p>
+          <p className={Styles.title}>SERVICE</p>
           <li>
-            <SettingsSystemDaydreamOutlinedIcon className={Sytles.icon} />
+            <SettingsSystemDaydreamOutlinedIcon className={Styles.icon} />
             <span>System Health</span>
           </li>
           <li>
-            <PsychologyOutlinedIcon className={Sytles.icon} />
+            <PsychologyOutlinedIcon className={Styles.icon} />
             <span>Logs</span>
           </li>
           <li>
-            <SettingsApplicationsIcon className={Sytles.icon} />
+            <SettingsApplicationsIcon className={Styles.icon} />
             <span>Settings</span>
           </li>
-          <p className={Sytles.title}>USER</p>
+          <p className={Styles.title}>USER</p>
           <li>
-            <AccountCircleOutlinedIcon className={Sytles.icon} />
+            <AccountCircleOutlinedIcon className={Styles.icon} />
             <span>Profile</span>
           </li>
           <li>
-            <ExitToAppIcon className={Sytles.icon} />
-            <span>Logout</span>
+            <ExitToAppIcon className={Styles.icon} />
+            <span onClick={LogoutUser}>Logout</span>
           </li>
         </ul>
       </div>
-      <div className={Sytles.bottom}>
+      <div className={Styles.bottom}>
         <div
-          className={Sytles.colorOption}
+          className={Styles.colorOption}
           onClick={() => dispatch({ type: "LIGHT" })}
         ></div>
         <div
-          className={Sytles.colorOption}
+          className={Styles.colorOption}
           onClick={() => dispatch({ type: "DARK" })}
         ></div>
       </div>

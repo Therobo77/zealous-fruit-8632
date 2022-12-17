@@ -19,8 +19,6 @@ const Login = () => {
       const user = userCredential.user;
       dispatch({ type: "LOGIN", payload: user });
       navigate("/");
-      // console.log(user)
-      // ...
     })
     .catch((error) => {
       // const errorCode = error.code;
@@ -42,4 +40,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+// export default Login;

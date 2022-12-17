@@ -1,9 +1,10 @@
 
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";
+// import { getAnalytics } from "firebase/analytics";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+import { useDispatch } from "react-redux";
 const firebaseConfig = {
   // apiKey: process.env.REACT_APP_FIREBASE_KEY,
   apiKey: "AIzaSyDA0NDxtoECgbgkJX93oiw1_efBOyoSXEA",
@@ -19,3 +20,19 @@ export const db = getFirestore(app);
 // const analytics = getAnalytics(app);
 export const auth = getAuth();
 export const storage = getStorage(app);
+
+// for google authentication
+export const provider = new GoogleAuthProvider();
+export const signInWithGoogle = () => {
+  signInWithPopup(auth, provider)
+    .then((res) => {
+      // const name = res.user.displayName;
+      // const email = res.user.email;
+      // const profilepic = res.user.photoURL;
+      window.location.reaplace("/");
+  
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};

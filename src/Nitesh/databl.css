@@ -1,0 +1,20 @@
+.cellWithImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:22px
+}
+.instock{
+    color:white;
+    padding:10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: green;
+    border-radius: 10px;
+}
+.outstok{
+    color:white;
+    padding:10px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+background-color: red;
+}

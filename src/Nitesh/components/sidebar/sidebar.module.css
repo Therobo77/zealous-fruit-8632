@@ -4,7 +4,10 @@
   min-height: 100vh;
   background-color: white;
 }
-
+.dark{
+  background-color: #111;
+  color: rgb(156, 156, 156);
+}
   .top {
     height: 50px;
     display: flex;
