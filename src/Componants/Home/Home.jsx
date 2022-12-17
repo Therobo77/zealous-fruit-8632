@@ -36,7 +36,6 @@ export const Home = () => {
  <HomePart4></HomePart4>
  <br />
  <br />
- 
 
    <Footer/>
    </>
