@@ -1,14 +1,17 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { auth, db } from "../../Nitesh/firebase";
 import Styles from "./Register.module.css";
 export const Register = () => {
   const [form, setForm] = useState({
-    Name: "",
-    Email: "",
-    Password: "",
-    Num: "",
+    name: "",
+    email: "",
+    password: "",
+    phone: "",
   });
   const navigate = useNavigate();
   const handleChange = (e) => {
@@ -17,27 +20,33 @@ export const Register = () => {
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    localStorage.setItem("user", JSON.stringify(form.Name));
-
-    var userList = JSON.parse(localStorage.getItem("allusers")) || [];
-    for (let i = 0; i < userList.length; i++) {
-      if (form.Email == userList[i].Email && form.Num == userList[i].Num) {
-        alert(`Email and mobile number already exist`);
-        return;
-      } else if (form.Email == userList[i].Email) {
-        alert(`Email already exist`);
-        return;
-      } else if (form.Num == userList[i].Num) {
-        alert(`Mobile number already exist`);
-        return;
-      }
+    try {
+      const res = await createUserWithEmailAndPassword(
+        auth,
+        form.email,
+        form.password
+      );
+      await setDoc(doc(db, "users", res.user.uid), {
+        ...form,
+        timeStamp: serverTimestamp(),
+        displayName: form.name,
+        username: "users",
+      });
+      alert("Register successfull");
+      navigate("/");
+    } catch (err) {
+      if (err.message === "Firebase: Error (auth/email-already-in-use).")
+        alert("Email already exist please enter right email");
+      if (
+        err.message ===
+        "Firebase: Password should be at least 6 characters (auth/weak-password)."
+      )
+        alert("Password is to short Please Enter at least 6 Characters");
     }
-    userList.push(form);
-    localStorage.setItem("allusers", JSON.stringify(userList));
-    alert("Register successfull");
-    navigate("/");
+
+    // navigate("/");
   };
 
   return (
@@ -54,7 +63,7 @@ export const Register = () => {
             <input
               required
               type="text"
-              name="Name"
+              name="name"
               placeholder="Enter Name"
               onInput={handleChange}
             />
@@ -63,7 +72,7 @@ export const Register = () => {
             <input
               required
               type="email"
-              name="Email"
+              name="email"
               placeholder="Enter Email"
               onInput={handleChange}
             />
@@ -72,7 +81,7 @@ export const Register = () => {
             <input
               required
               type="password"
-              name="Password"
+              name="password"
               placeholder="Enter Password"
               onInput={handleChange}
             />
@@ -81,7 +90,7 @@ export const Register = () => {
             <input
               required
               type="number"
-              name="Num"
+              name="phone"
               placeholder="Phone Number"
               onInput={handleChange}
             />
@@ -96,8 +105,9 @@ export const Register = () => {
                 color: "white",
                 borderRadius: "5px",
               }}
-              onSubmit={navigate("/")}
-            >Submit</button>
+            >
+              Submit
+            </button>
           </form>
           <p></p>
 

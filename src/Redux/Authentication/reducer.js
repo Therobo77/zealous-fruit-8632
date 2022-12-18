@@ -25,11 +25,11 @@ export const reducer = (state = initailState, action) => {
     case userLoginError || AdminLoginError:
       return { ...state, isLoading: false, isError: true };
     case userLoginSuccessful:
-     
       saveData("token", payload.uid);
       saveData("user", true);
       return { ...state, isLoading: false, token: payload, user: true };
     case AdminLoginSuccessful:
+      console.log(payload);
       saveData("token", payload.uid);
       saveData("admin", true);
       return { ...state, isLoading: false, token: payload, admin: true };

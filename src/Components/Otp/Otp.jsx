@@ -2,11 +2,10 @@ import {React, useState} from 'react'
 import CloseIcon from "@mui/icons-material/Close";
 import Styles from "./Otp.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
-import { auth, provider } from "../../Nitesh/firebase";
+import { auth } from "../../Nitesh/firebase";
 import { adminSuccessful, userError, userSuccessful } from "../../Redux/Authentication/action";
-import { AdminLoginSuccessful } from "../../Redux/Authentication/actionType";
 
 
 const Otp = () => {
@@ -14,19 +13,19 @@ const Otp = () => {
         return { error: a.AuthReducer.isError, token: a.AuthReducer.token, email:a.UserAuth.email };
       });
     const dispatch = useDispatch();
-  console.log(email);
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  console.log(password)
     const handleLogin = (event) => {
         event.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
             // Signed in
+
             const user = userCredential.user;
             if (email === "admin@gmail.com") {
-              dispatch(AdminLoginSuccessful(user));
-              navigate("/admin");
+              dispatch(adminSuccessful(user));
+              
+              navigate("/admin/");
             } else {
               dispatch(userSuccessful(user));
               navigate("/");

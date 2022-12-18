@@ -1,5 +1,4 @@
 import Home from "../pages/home/Home";
-// import Login from ".../Components/login/Login";
 import List from "../pages/list/List";
 import Single from "../pages/single/Single";
 import New from "../pages/new/New";
@@ -8,7 +7,6 @@ import { productInputs, userInputs } from "../formSource";
 import Styles from "../style/dark.module.css";
 import { useContext } from "react";
 import { DarkModeContext } from "../context/darkModeContext";
-// import { AuthContext } from "../context/AuthContext";
 import NewProduct from "../pages/new/newProduct";
 import ProductList from "../pages/list/productList";
 import { useSelector } from "react-redux";
@@ -16,7 +14,7 @@ import Login from "../../Components/Login";
 
 function Admin() {
   const { darkMode } = useContext(DarkModeContext);
-  const user  = useSelector((a) => a.admin);
+  const user = useSelector((a) => a.AuthReducer.admin);
   // console.log(user);
   // const currentUser  = useContext(false);
 
