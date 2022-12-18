@@ -6,9 +6,10 @@ import { RiContactsLine } from "react-icons/ri";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { LogoutUser } from "../../Nitesh/Actions/allactions";
+import logo from "./Glossity preview.png";
 
 export const Navbar = () => {
-  const admin = useSelector((a) => a.admin);
+  const admin = useSelector((a) => a.AuthReducer.admin);
   var navigate = useNavigate();
   const z = JSON.parse(localStorage.getItem("user")) || "Login";
   const [refreser, setRefreser] = useState(false);
@@ -45,7 +46,9 @@ export const Navbar = () => {
           </div>
           <div className="Navbar-14">
             <Link className="Navbar-15" to={`/`}>
-              <div className="Navbar-15">GLOSSITY</div>
+              <div className="Navbar-15">
+                <img src={logo} alt="logo" />
+              </div>
             </Link>
           </div>
           <div className="Navbar-16">
@@ -62,11 +65,11 @@ export const Navbar = () => {
                 <HiOutlineShoppingBag />
               </li>
               <li>|</li>
-              {z == "Login"?(
+              {z === "Login" ? (
                 <Link to={`/login`}>
                   <span id="adjustment1">
                     <li className="hellohover">
-                      <RiContactsLine />
+                      {!admin && <RiContactsLine />}
                     </li>
                   </span>
                 </Link>
@@ -80,12 +83,14 @@ export const Navbar = () => {
                     : { color: "black" }
                 }
               >
-                {z}
+                {!admin&&z}
               </div>
-              {z !== "Login" || admin? (
+              {z !== "Login" || admin ? (
                 <p
                   className="hellohover"
-                  onClick={() => {LogoutUser()}}
+                  onClick={() => {
+                    LogoutUser();
+                  }}
                   style={{ color: "rgb(255,51,153)", cursor: "pointer" }}
                 >
                   Logout

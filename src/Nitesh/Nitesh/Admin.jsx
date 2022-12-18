@@ -14,7 +14,7 @@ import Login from "../../Components/Login";
 
 function Admin() {
   const { darkMode } = useContext(DarkModeContext);
-  const user = useSelector((a) => a.admin);
+  const user = useSelector((a) => a.AuthReducer.admin);
   // console.log(user);
   // const currentUser  = useContext(false);
 
@@ -25,67 +25,67 @@ function Admin() {
     <div className={darkMode ? `${Styles.app1} ${Styles.dark}` : Styles.app1}>
       <Routes>
         <Route path="/">
-        <Route
-          index
-          element={
-            <RequireAuth>
-              <Home />
-            </RequireAuth>
-          }
-        />
-        <Route path="login" element={<Login />} />
-        <Route path="users">
           <Route
             index
             element={
               <RequireAuth>
-                <List />
+                <Home />
               </RequireAuth>
             }
           />
-          <Route
-            path=":userId"
-            element={
-              <RequireAuth>
-                <Single />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path="new"
-            element={
-              <RequireAuth>
-                <New inputs={userInputs} title="Add New User" />
-              </RequireAuth>
-            }
-          />
-        </Route>
-        <Route path="products">
-          <Route
-            index
-            element={
-              <RequireAuth>
-                <ProductList />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path=":productId"
-            element={
-              <RequireAuth>
-                <Single />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path="newProduct"
-            element={
-              <RequireAuth>
-                <NewProduct inputs={productInputs} title="Add New Product" />
-              </RequireAuth>
-            }
-          />
-        </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="users">
+            <Route
+              index
+              element={
+                <RequireAuth>
+                  <List />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path=":userId"
+              element={
+                <RequireAuth>
+                  <Single />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="new"
+              element={
+                <RequireAuth>
+                  <New inputs={userInputs} title="Add New User" />
+                </RequireAuth>
+              }
+            />
+          </Route>
+          <Route path="products">
+            <Route
+              index
+              element={
+                <RequireAuth>
+                  <ProductList />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path=":productId"
+              element={
+                <RequireAuth>
+                  <Single />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="newProduct"
+              element={
+                <RequireAuth>
+                  <NewProduct inputs={productInputs} title="Add New Product" />
+                </RequireAuth>
+              }
+            />
+          </Route>
         </Route>
       </Routes>
     </div>
