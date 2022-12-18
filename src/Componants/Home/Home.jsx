@@ -11,7 +11,7 @@ import { HomePart4 } from './HomePart4'
 
 
 
-import { Slider1 } from './Slider1'
+import { Slideshow } from './Slider1'
 import { Slider2 } from './Slider2'
 import { Slider3 } from './Slider3'
 
@@ -26,7 +26,8 @@ export const Home = () => {
  <Header/>
  <Navbar/>
 
-<Slider1></Slider1>
+<Slideshow></Slideshow>
+<br/>
  <Slider2></Slider2>
  <br /> <br />
  <HomePart3></HomePart3>
