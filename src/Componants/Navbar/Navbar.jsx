@@ -62,7 +62,7 @@ export const Navbar = () => {
                 <HiOutlineShoppingBag />
               </li>
               <li>|</li>
-              {z == "Login" ? (
+              {z == "Login"?(
                 <Link to={`/login`}>
                   <span id="adjustment1">
                     <li className="hellohover">
@@ -82,7 +82,7 @@ export const Navbar = () => {
               >
                 {z}
               </div>
-              {z !== "Login" ? (
+              {z !== "Login" || admin? (
                 <p
                   className="hellohover"
                   onClick={() => {LogoutUser()}}

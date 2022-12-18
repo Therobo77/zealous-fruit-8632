@@ -72,7 +72,7 @@ const Widget = ({ type }) => {
       data = {
         title: "PRODUTS",
         query: "products",
-        isMoney: true,
+        isMoney: false,
         link: "See details",
         icon: (
           <AccountBalanceWalletOutlinedIcon

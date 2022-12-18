@@ -15,13 +15,18 @@ import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import { LogoutUser } from "../../Actions/allactions";
-
+import { ImHome } from "react-icons/im";
 const Sidebar = () => {
-  const { dispatch,darkMode } = useContext(DarkModeContext);
+  const { dispatch, darkMode } = useContext(DarkModeContext);
   return (
-    <div className={darkMode ? `${Styles.sidebar} ${Styles.dark}` : Styles.sidebar}>
+    <div
+      className={darkMode ? `${Styles.sidebar} ${Styles.dark}` : Styles.sidebar}
+    >
+      <Link to="/">
+        <ImHome />
+      </Link>
       <div className={Styles.top}>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/admin" style={{ textDecoration: "none" }}>
           <span className={Styles.logo}>Nitesh Sindhu</span>
         </Link>
       </div>
@@ -30,7 +35,7 @@ const Sidebar = () => {
         <ul>
           <p className={Styles.title}>MAIN</p>
           <li>
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/admin" style={{ textDecoration: "none" }}>
               <DashboardIcon className={Styles.icon} />
               <span>Dashboard</span>
             </Link>
