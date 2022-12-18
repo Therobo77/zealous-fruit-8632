@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import './Register.css'
+import Styles from './Register.module.css'
 export const Register = () => {
   const [form, setForm] = useState({
     Name:"",
@@ -49,16 +49,16 @@ export const Register = () => {
   
   return (
     <>
-      <div className="forapper1">
+      <div className={Styles.forapper1}>
         
-    <div className="adorm1">
+    <div className={Styles.adorm1}>
         <p></p>
-    <p className="trncs2
-    ">CREATE  <br /> ACCOUNT</p>
+    <p className={Styles.trncs2}
+    >CREATE  <br /> ACCOUNT</p>
     <br />
     <form onSubmit={handleSubmit} >
-    <span className="trncs1
-    ">Name</span>
+    <span className={Styles.trncs1}
+    >Name</span>
          <br />
           <input
           required
@@ -68,8 +68,8 @@ export const Register = () => {
             onInput={handleChange}
           />  
           <br />  
-          <span className="trncs1
-          ">Email</span>
+          <span className={Styles.trncs1}
+          >Email</span>
          <br />
           <input
           required
@@ -79,8 +79,8 @@ export const Register = () => {
             onInput={handleChange}
           /> 
           <br />
-          <span className="trncs1
-          ">Password</span>
+          <span className={Styles.trncs1}
+          >Password</span>
          <br />
           <input
           required
@@ -90,8 +90,8 @@ export const Register = () => {
             onInput={handleChange}
           /> 
           <br />
-          <span className="trncs1
-          ">Phone Number</span>
+          <span className={Styles.trncs1}
+          >Phone Number</span>
          <br />
           <input
           required

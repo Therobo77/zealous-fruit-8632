@@ -8,36 +8,36 @@ import { useDispatch, useSelector } from "react-redux";
 import { auth, provider } from "../Nitesh/firebase";
 import { adminSuccessful, userError, userSuccessful } from "../Redux/Authentication/action";
 import { AdminLoginSuccessful } from "../Redux/Authentication/actionType";
+import { setUserEmail } from "../Redux/UserAuth/action";
 
 export default function Login() {
-  const { error } = useSelector((a) => {
-    return { error: a.isError, token: a.token };
-  });
+  // const { error } = useSelector((a) => {
+  //   return { error: a.AuthReducer.isError, token: a.AuthReducer.token };
+  // });
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const handleLogin = (event) => {
-    event.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        if (email === "admin@gmail.com") {
-          dispatch(AdminLoginSuccessful(user));
-          navigate("/admin");
-        } else {
-          dispatch(userSuccessful(user));
-          navigate("/");
-        }
-      })
-      .catch((error) => {
-        // const errorCode = error.code;
-        // const errorMessage = error.message;
-        // ..
-        dispatch(userError());
-      });
-  };
+  // const handleLogin = (event) => {
+  //   event.preventDefault();
+  //   signInWithEmailAndPassword(auth, email, password)
+  //     .then((userCredential) => {
+  //       // Signed in
+  //       const user = userCredential.user;
+  //       if (email === "admin@gmail.com") {
+  //         dispatch(AdminLoginSuccessful(user));
+  //         navigate("/admin");
+  //       } else {
+  //         dispatch(userSuccessful(user));
+  //         navigate("/");
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       // const errorCode = error.code;
+  //       // const errorMessage = error.message;
+  //       // ..
+  //       dispatch(userError());
+  //     });
+  // };
   const handlegoogle = () => {
     signInWithPopup(auth, provider)
       .then((res) => {
@@ -58,6 +58,11 @@ export default function Login() {
         console.log(err);
       });
   };
+
+  const handleUserAuth=()=>{
+    dispatch(setUserEmail(email))
+    navigate("/otpPage")
+  }
   return (
     <div className={Styles.Login}>
       <div className={Styles.link1}>
@@ -66,29 +71,26 @@ export default function Login() {
         </Link>
       </div>
       <h1>LOGIN</h1>
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleUserAuth}>
         <label htmlFor="Enter your Phone / Email">
           Enter your Phone / Email
         </label>
-        <br />
         <input
           type="email"
+          required
           value={email}
           onChange={(a) => setEmail(a.target.value)}
         />
         <br />
-        <br />
-        <label htmlFor="Enter your Phone / Email">Enter your Password</label>
-        <br />
+        {/* <label htmlFor="Enter your Phone / Email">Enter your Password</label>
         <input
           type="password"
           value={password}
           onChange={(a) => setPassword(a.target.value)}
         />
-        <br />
-        <br />
+        <br /> */}
         <button type="submit">Continue</button>
-        {error && <span>Wrong email & password!</span>}
+        {/* {error && <span>Wrong email & password!</span>} */}
       </form>
       <p className={Styles.or}>
         <hr /> Or <hr />
@@ -98,13 +100,10 @@ export default function Login() {
         <p>Continue with Google</p>
       </div>
       <br />
-      <br />
       <div className={Styles.facebook}>
         <img src="https://static.nnnow.com/facebook.png" alt="" />
         <p>Continue with Facebook</p>
       </div>
-      <br />
-      <br />
       <div className={Styles.privacy}>
         <p>
           By proceeding, you agree to

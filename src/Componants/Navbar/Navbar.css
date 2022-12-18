@@ -39,10 +39,19 @@ display: flex;
    }
 
     .Navbar-15{
-        font-size: 40px;
+        /* border: 1px solid red; */
+        margin-top: 0px;
+        /* font-size: 40px;
         letter-spacing: 11px;
-        font-weight: 600;
+        font-weight: 900; */
+        height: 60px;
     }
+    .Navbar-15>img{
+        margin:10px;
+        height: 65px;
+        width: 220px;
+    }
+
     .Navbar-17{
         margin-top: 20px;
         display: flex;

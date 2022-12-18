@@ -1,0 +1,43 @@
+
+.forapper1{
+    width: 100vw;
+    background-color:rgba(255, 255, 255, 0.5);
+    position:fixed;
+    top: 0;
+    /* filter: blur(5px) */
+    backdrop-filter:blur(.5px);
+    
+  
+  }
+  .adorm1{
+    width: 400px;
+    position: absolute;
+    left:38%;
+    top:10%;
+    /* border:1px solid red; */
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px; */
+    /* display: none */
+    background : white;
+    /* z-index: 55; */
+    /* margin: auto; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* text-align: center; */
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  .trncs2{
+    margin:0px;
+    padding: 0px;
+    font-weight: bolder;
+    font-size: larger;
+    /* border:1px solid red; */
+    text-align: center;
+
+  }
+  .trncs1{
+    margin:0px;
+    padding: 0px;
+    font-size: medium;
+
+  }

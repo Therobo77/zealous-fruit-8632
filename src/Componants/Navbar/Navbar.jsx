@@ -6,6 +6,7 @@ import { RiContactsLine } from "react-icons/ri";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { LogoutUser } from "../../Nitesh/Actions/allactions";
+import logo from "./Glossity preview.png"
 
 export const Navbar = () => {
   const admin = useSelector((a) => a.admin);
@@ -45,7 +46,7 @@ export const Navbar = () => {
           </div>
           <div className="Navbar-14">
             <Link className="Navbar-15" to={`/`}>
-              <div className="Navbar-15">GLOSSITY</div>
+              <div className="Navbar-15"><img src={logo}alt="logo"/></div>
             </Link>
           </div>
           <div className="Navbar-16">
