@@ -22,12 +22,12 @@ const data = [
     portfolio: "https://niteshsindhu.github.io/",
   },
   {
-    name: "Nitesh Sindhu",
-    type: "Backend Expert",
-    url: "https://avatars.githubusercontent.com/u/88618256?v=4",
-    github: "https://github.com/NiteshSindhu",
-    linkedin: "https://www.linkedin.com/in/nitesh-sindhu-150473203/",
-    portfolio: "https://niteshsindhu.github.io/",
+    name: "Aman Singh",
+    type: "UI DESIGNER",
+    url: "https://avatars.githubusercontent.com/u/110046883?v=4",
+    github: "https://github.com/amansingh456",
+    linkedin: "https://www.linkedin.com/in/aman690/",
+    portfolio: "https://amansingh456.github.io/",
   },
 
   {
