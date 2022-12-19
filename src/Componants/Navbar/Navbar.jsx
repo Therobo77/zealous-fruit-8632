@@ -11,7 +11,8 @@ import logo from "./Glossity preview.png";
 export const Navbar = () => {
   const admin = useSelector((a) => a.AuthReducer.admin);
   var navigate = useNavigate();
-  const z = JSON.parse(localStorage.getItem("user")) || "Login";
+  const [ishover, setHover] = useState(false);
+  const z = JSON.parse(localStorage.getItem("user")) || JSON.parse(localStorage.getItem("admin"))||"Login";
   const [refreser, setRefreser] = useState(false);
   const handleCart = () => {
     if (z == "Login") {
@@ -28,6 +29,12 @@ export const Navbar = () => {
 
     setRefreser(!refreser);
   };
+  const isHOvered = () => {
+    setHover(true);
+  }
+  const removeHover = () => {
+    setHover(false);
+  }
 
   return (
     <>
@@ -114,21 +121,20 @@ export const Navbar = () => {
       <div className="NavbarContainer-2">
         <div className="header--left">
           <ul>
-            <li className="nav-hover ">
-              {" "}
-              <Link to={`/mackupproduct`}>
+            <li className="nav-hover " onMouseOver={isHOvered} onMouseOut={removeHover}>
+              <Link to={`/`}>
                 <a className="heading1" href="">
                   SALE
                 </a>
               </Link>
             </li>
-            <li className="nav-hover">
+            <li className="nav-hover" onMouseOver={isHOvered} onMouseOut={removeHover}>
               <Link to={`/mackupproduct`}>
                 <a href="" className="heading">
                   MAKEUP
                 </a>
               </Link>
-              <div className="hover ">
+              <div className={`${ishover? "hovered":"hover"} hover`} >
                 <div className="hover--navbar">
                   <div>
                     <ul>
@@ -262,13 +268,13 @@ export const Navbar = () => {
                 </div>
               </div>
             </li>
-            <li className="nav-hover">
-              <Link to={`/hairproduct`}>
+            <li className="nav-hover" onMouseOver={isHOvered} onMouseOut={removeHover}>
+              <Link to={`/skinproduct`}>
                 <a className="heading" href="">
                   SKINCARE
                 </a>
               </Link>
-              <div className="hover ">
+              <div className={`${ishover? "hovered":"hover"} hover`}>
                 <div className="hover--navbar">
                   <div>
                     {/* <h5>FACE</h5> */}
@@ -403,13 +409,13 @@ export const Navbar = () => {
                 </div>
               </div>
             </li>
-            <li className="nav-hover">
+            <li className="nav-hover" onMouseOver={isHOvered} onMouseOut={removeHover}>
               <Link to={`/hairproduct`}>
                 <a className="heading" href="">
                   FRAGRANCE
                 </a>
               </Link>
-              <div className="hover ">
+              <div className={`${ishover? "hovered1":"hover"} hover`}>
                 <div className="hover--navbar">
                   <div>
                     {/* <h5>WOMEN</h5> */}
@@ -442,13 +448,13 @@ export const Navbar = () => {
                 </div>
               </div>
             </li>
-            <li className="nav-hover">
-              <Link to={`/mackupproduct`}>
+            <li className="nav-hover" onMouseOver={isHOvered} onMouseOut={removeHover}>
+              <Link to={`/allhair`}>
                 <a className="heading" href="">
                   HAIRCARE
                 </a>
               </Link>
-              <div className="hover ">
+              <div className={`${ishover? "hovered2":"hover"} hover`}>
                 <div className="hover--navbar">
                   <div>
                     {/* <h5>SHAMPOO & CONDITIONER</h5> */}
@@ -488,13 +494,13 @@ export const Navbar = () => {
                 </div>
               </div>
             </li>
-            <li className="nav-hover">
-              <Link to={`/hairproduct`}>
+            <li className="nav-hover" onMouseOver={isHOvered} onMouseOut={removeHover}>
+              <Link to={`/tools`}>
                 <a className="heading" href="">
                   TOOLS & BRUSHES
                 </a>
               </Link>
-              <div className="hover">
+              <div className={`${ishover? "hovered3":"hover"} hover`}>
                 <div className="hover--navbar">
                   <div>
                     {/* <h5>	BRUSHES</h5> */}
@@ -559,98 +565,13 @@ export const Navbar = () => {
                 </div>
               </div>
             </li>
-            <li className="nav-hover">
-              <Link to={`/mackupproduct`}>
+            <li className="nav-hover" onMouseOver={isHOvered} onMouseOut={removeHover}>
+              <Link to={`/about`}>
                 <a className="heading" href="">
-                  BRANDS
+                  ABOUT
                 </a>
               </Link>
-              <div className="hover">
-                <div className="hover--navbar">
-                  <div>
-                    {/* <h5>TOP MAKEUP BRANDS</h5> */}
-                    <ul>
-                      <li className="first">
-                        <a href="">TOP MAKEUP BRANDS</a>
-                      </li>
-                      <li>
-                        <a href="">Lancôme</a>
-                      </li>
-                      <li>
-                        <a href="">Caudalie</a>
-                      </li>
-                      <li>
-                        <a href="">Kora Organics</a>
-                      </li>
-                      <li>
-                        <a href="">Mario Badescu</a>
-                      </li>
-                      <li>
-                        <a href="">Foreo</a>
-                      </li>
-                      <li>
-                        <a href="">Shiseido</a>
-                      </li>
-                      <li>
-                        <a href="">Estee Lauder</a>
-                      </li>
-                      <li>
-                        <a href="">Elizabeth Arden</a>
-                      </li>
-                      <li>
-                        <a href="">Clarins</a>
-                      </li>
-                      <li>
-                        <a href="">Gallinee</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    {/* <h5>TOP FRAGRANCE BRANDS</h5> */}
-                    <ul>
-                      <li className="first">
-                        <a href="">FRAGRANCE BRANDS</a>
-                      </li>
-                      <li>
-                        <a href="">Shiseido</a>
-                      </li>
-                      <li>
-                        <a href="">Estee Lauder</a>
-                      </li>
-                      <li>
-                        <a href="">Elizabeth Arden</a>
-                      </li>
-                      <li>
-                        <a href="">Clarins</a>
-                      </li>
-                      <li>
-                        <a href="">Gallinee</a>
-                      </li>
-                      <li>
-                        <a href="">Lancôme</a>
-                      </li>
-                      <li>
-                        <a href="">Caudalie</a>
-                      </li>
-                      <li>
-                        <a href="">Kora Organics</a>
-                      </li>
-                      <li>
-                        <a href="">Mario Badescu</a>
-                      </li>
-                      <li>
-                        <a href="">Foreo</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    {" "}
-                    <li className="first">
-                      <a href=""> BRANDS A-Z</a>
-                    </li>
-                  </div>
-                </div>
-              </div>
+              
             </li>
           </ul>
         </div>

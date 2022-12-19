@@ -8,7 +8,7 @@ import { db } from "../../firebase";
 
 const ProductDatatable = () => {
   const [data, setData] = useState([]);
-  const userCollectiontionRef = collection(db, "products");
+  // const userCollectiontionRef = collection(db, "products");
 
   useEffect(() => {
     const unsub = onSnapshot(
@@ -61,7 +61,7 @@ const ProductDatatable = () => {
     <div className={Styles.datatable}>
       <div className={Styles.datatableTitle}>
         Add New Product
-        <Link to="/products/newProduct" className={Styles.link}>
+        <Link to="newproduct" className={Styles.link}>
           Add New
         </Link>
       </div>

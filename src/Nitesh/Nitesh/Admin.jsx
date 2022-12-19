@@ -1,8 +1,8 @@
-import Home from "../pages/home/Home";
+// import Home from "../pages/home/Home";
 import List from "../pages/list/List";
 import Single from "../pages/single/Single";
 import New from "../pages/new/New";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import { productInputs, userInputs } from "../formSource";
 import Styles from "../style/dark.module.css";
 import { useContext } from "react";
@@ -10,8 +10,7 @@ import { DarkModeContext } from "../context/darkModeContext";
 import NewProduct from "../pages/new/newProduct";
 import ProductList from "../pages/list/productList";
 import { useSelector } from "react-redux";
-import Login from "../../Components/Login";
-
+import Homes from "../pages/home/Home";
 function Admin() {
   const { darkMode } = useContext(DarkModeContext);
   const user = useSelector((a) => a.AuthReducer.admin);
@@ -24,16 +23,16 @@ function Admin() {
   return (
     <div className={darkMode ? `${Styles.app1} ${Styles.dark}` : Styles.app1}>
       <Routes>
-        <Route path="/">
+        <Route path="/"/>
           <Route
             index
             element={
               <RequireAuth>
-                <Home />
+                <Homes />
               </RequireAuth>
             }
-          />
-          <Route path="login" element={<Login />} />
+            />
+            
           <Route path="users">
             <Route
               index
@@ -68,7 +67,8 @@ function Admin() {
                   <ProductList />
                 </RequireAuth>
               }
-            />
+              />
+              
             <Route
               path=":productId"
               element={
@@ -76,18 +76,19 @@ function Admin() {
                   <Single />
                 </RequireAuth>
               }
-            />
+              />
             <Route
-              path="newProduct"
+              path=":newproduct"
               element={
                 <RequireAuth>
                   <NewProduct inputs={productInputs} title="Add New Product" />
                 </RequireAuth>
               }
             />
-          </Route>
-        </Route>
-      </Routes>
+       </Route>
+      </Routes> 
+
+
     </div>
   );
 }

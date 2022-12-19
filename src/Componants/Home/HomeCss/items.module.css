@@ -1,0 +1,51 @@
+.tag1 {
+    font-size: 12px;
+  
+    font-family: sans-serif;
+    font-weight: bold;
+  
+    color: #000;
+  }
+  .tag1 > p {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+  
+    align-items: center;
+    justify-items: center;
+    font-size: 12px;
+    margin: auto;
+  }
+  #main {
+    width: 90%;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .Scrollup {
+    width: 100%;
+    background-color: aqua;
+    height: 122px;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .hoveron {
+    visibility: hidden;
+    width: 100%;
+  }
+  #image1 {
+    width: 100%;
+    height: 250px;
+  }
+  .Scrollup > button {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+  }
+  
