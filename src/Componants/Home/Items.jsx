@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { MdFavoriteBorder } from "react-icons/md";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import Styles from "./HomeCss/items.module.css";
+import { loadData } from "../../Nitesh/utils/accessLocalStorage";
 
 // const image_url =
 //   "https://cdn09.nnnow.com/web-images/large/styles/NAG35MWAZB5/1603956012732/1.jpg";
@@ -10,7 +11,8 @@ import Styles from "./HomeCss/items.module.css";
 // const brandname = "OLAPLEX";
 // const productDescription = "N°4 Bond Maintenance Shampoo";
 // const price = 6500;
-
+let cart = loadData("cart") || [];
+let whitelist = loadData("whitelist") || [];
 export default function Items({ e }) {
   const { image_url, image2_url, brandname, productDescription, price } = e;
   const [hover, setHover] = useState(false);
@@ -23,19 +25,26 @@ export default function Items({ e }) {
     setHover(false);
     ref.current.src = image_url;
   };
+  const addtocart = () => {
+  // cart.push()
+  alert("Items adding in cart successfully")
+}
 
+  const addtowhitelist = () => {
+    alert("Items adding in Favourite successfully")
+  }
   return (
     <div id={Styles.main} onMouseOver={hoverdiv} onMouseOut={handleMouseOut}>
       <img id={Styles.image1} src={image_url} alt="" ref={ref} />
       <div className={`${hover ? Styles.Scrollup : Styles.hoveron}`}>
         <button>
           <HiOutlineShoppingBag size={40} color="white"></HiOutlineShoppingBag>
-          <span id={Styles.textCSS}>ADD TO CART</span>
+          <span id={Styles.textCSS} onClick={addtocart}>ADD TO CART</span>
         </button>
 
         <button>
           <MdFavoriteBorder size={40} color="white"></MdFavoriteBorder>
-          <span id={Styles.textCSS}>FAVOURITE</span>
+          <span id={Styles.textCSS} onClick={addtowhitelist}>FAVOURITE</span>
         </button>
       </div>
 

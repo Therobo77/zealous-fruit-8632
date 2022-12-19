@@ -20,19 +20,27 @@ import New from "../Nitesh/pages/new/New";
 import Tools from "../Componants/Pages/TOOLS";
 import About from "../Componants/Pages/About";
 // import { Home } from "./Componants/Home/Home";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const MainRoute = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/admin" element={<Admin />}></Route>
+        <Route path="/admin" element={<Admin />} />
         <Route path="/hairproduct" element={<FRAGRANCE />} />
         <Route path="/mackupproduct" element={<Makeup />} />
         <Route path="/skinproduct" element={<Skincare />} />
         <Route path="/allhair" element={<Haircare />} />
-        <Route path="/tools" element={<Tools/>} />
-        <Route path="/about" element={<About/>} />
+        <Route path="/tools" element={<Tools />} />
+        <Route
+          path="/about"
+          element={
+            <ChakraProvider>
+              <About />
+            </ChakraProvider>
+          }
+        />
         <Route path="/login" element={<Login />}></Route>
         <Route path="/otpPage" element={<Otp />}></Route>
         <Route path="/register" element={<Register />}></Route>
