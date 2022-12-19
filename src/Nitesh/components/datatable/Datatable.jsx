@@ -22,7 +22,7 @@ const Datatable = () => {
         let list = [];
         snapshot.forEach((doc) => list.push({ id: doc.id, ...doc.data() }));
         setData(list);
-        console.log(list);
+        // console.log(list);
       },
       (err) => {
         console.log(err);
