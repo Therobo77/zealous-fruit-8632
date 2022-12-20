@@ -26,12 +26,13 @@ Sephora is a French multinational retailer of personal care and beauty products.
 
 ## Build with
 
+
 <table  align=center>
   <tr>
  <td align=center> <img src="https://user-images.githubusercontent.com/105917542/208613023-95fe5a96-0fed-4604-8e40-c83e44c1a04f.png"  height=100   width=150 ></td>
      <td align=center> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" height=100   ></td>
     <td align=center> <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"  height=100   width=150 ></td>
-     <td align=center> <img src="https://img.icons8.com/nolan/64/wikipedia.png"  height=100  ></td>
+     <td align=center> <img src="https://user-images.githubusercontent.com/105917542/208622344-101f8282-06f2-4720-9ce8-69e349b51f84.png"  height=100  ></td>
   </tr><tr><td align=center>  <img src="https://img.icons8.com/color/48/null/chakra-ui.png"   width=100  ></td>
    <td align=center> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/768px-Bootstrap_logo.svg.png"  height=100    ></td>
   <td align=center> <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"  height=100  ></td>
