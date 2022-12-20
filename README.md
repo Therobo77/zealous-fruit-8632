@@ -74,17 +74,11 @@ Sephora is a French multinational retailer of personal care and beauty products.
 - Linkedin:[Vikash Lal](https://www.linkedin.com/in/vikashlal7722/)
 - Email: (anshusinha8873@gmail.com)
 
-# 👨🏻 **Aman Singh Rajawat** 
+# 🧑🏻 **Nitesh Sindhu**
 
-- Github:[@amansingh456](https://github.com/amansingh456)
-- Linkedin:[aman690](https://www.linkedin.com/in/aman690/)
-- Email: (amansinghrajawat690@gmail.com)
-
-# 🧑🏻‍🦰 **Shobha Malviya**
-
-- Github:[@Shobha](https://github.com/shobhamalviya)
-- Linkedin:[Shobha Malviya](https://www.linkedin.com/in/shobha-malviya-24bb311a4/)
-- Email: (shobhamalviya5798@gmail.com)
+- Github:[@NiteshSindhu](https://github.com/NiteshSindhu)
+- Linkedin:[Nitesh Sindhu](https://www.linkedin.com/in/nitesh-sindhu-150473203/)
+- Email: (niteshsindhu1435@gmail.com)
 
 # 👱🏻‍♂️ **Rajnandani Kumari**
 
@@ -92,9 +86,19 @@ Sephora is a French multinational retailer of personal care and beauty products.
 - Linkedin:[Rajnandani Kumari](https://www.linkedin.com/in/k-rajnandani210/)
 - Email: (rajnandani02101997@gmail.com)
 
-# 🧑🏻 **Nitesh Sindhu**
+# 🧑🏻‍🦰 **Shobha Malviya**
 
-- Github:[@NiteshSindhu](https://github.com/NiteshSindhu)
-- Linkedin:[Nitesh Sindhu](https://www.linkedin.com/in/nitesh-sindhu-150473203/)
-- Email: (niteshsindhu1435@gmail.com)
+- Github:[@Shobha](https://github.com/shobhamalviya)
+- Linkedin:[Shobha Malviya](https://www.linkedin.com/in/shobha-malviya-24bb311a4/)
+- Email: (shobhamalviya5798@gmail.com)
+
+
+# 👨🏻 **Aman Singh Rajawat** 
+
+- Github:[@amansingh456](https://github.com/amansingh456)
+- Linkedin:[aman690](https://www.linkedin.com/in/aman690/)
+- Email: (amansinghrajawat690@gmail.com)
+
+
+
 
