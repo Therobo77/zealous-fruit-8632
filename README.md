@@ -12,8 +12,8 @@ Sephora is a French multinational retailer of personal care and beauty products.
 
 # 🧔🏻 **Sanjay Kumar Verma ** `IA Manager`
 
-- Github:[@Vikash](https://github.com/Therobo77)
-- Linkedin:[Vikash Lal](https://www.linkedin.com/in/vikashlal7722/)
+- Github:[@Sanjay](https://github.com/Therobo77)
+- Linkedin:[Sanjay Kumar Verma](https://www.linkedin.com/in/vikashlal7722/)
 - Email: [G-mail](anshusinha8873@gmail.com)
 
 
