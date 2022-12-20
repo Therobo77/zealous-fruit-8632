@@ -1,3 +1,5 @@
+# Sephora.COM  (Clone)
+
 # zealous-fruit-8632  `Project Code`
 
 # Robos oF Glossity `Team Name`
@@ -8,13 +10,62 @@ Sephora is a French multinational retailer of personal care and beauty products.
 </h2>
 
 
-# Collaborators
+
+## Project look like this
+
+<!-- ![image]() -->
+
+###  Admin Panel
+
+![image](https://user-images.githubusercontent.com/105917542/208611727-b312fa74-50f4-4b4a-8346-1ef21c92f735.png)
+
+
+###  Landing Page
+
+![image](https://user-images.githubusercontent.com/105917542/208611878-f5187684-11c0-43d6-bf70-ece09213ffd6.png)
+
+## Build with
+
+<table  align=center>
+  <tr>
+ <td align=center> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png"  height=100   width=150 ></td>
+     <td align=center> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" height=100   ></td>
+    <td align=center> <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"  height=100   width=150 ></td>
+     <td align=center> <img src="https://img.icons8.com/nolan/64/wikipedia.png"  height=100  ></td>
+  </tr><tr><td align=center>  <img src="https://img.icons8.com/color/48/null/chakra-ui.png"   width=100  ></td>
+   <td align=center> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/768px-Bootstrap_logo.svg.png"  height=100    ></td>
+  <td align=center> <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"  height=100  ></td>
+  <td align=center> <img src="https://img.icons8.com/plasticine/100/null/github.png"  height=100  ></td>
+  </tr>
+
+</table>
+
+<hr/>
+
+## Functionalities
+
+## Installation and setup instruction
+
+## Tool Used
+
+- ### **Frontend**
+- ### **React**
+- ### **Javascript**
+- ### **CSS**
+- ### **HTML**
+
+- ### **Integration**
+
+## ✅ **Netlify link** [Click Here To See Magic](https://robos-of-glossity.netlify.app/)
+
+## 🤝 **_Collaborators_**
+
 
 # 🧔🏻 **Sanjay Kumar Verma ** `IA Manager`
 
 - Github:[@Sanjay](https://github.com/Therobo77)
-- Linkedin:[Sanjay Kumar Verma](https://www.linkedin.com/in/vikashlal7722/)
-- Email: [G-mail](anshusinha8873@gmail.com)
+- Linkedin:[Sanjay Kumar Verma](https://www.linkedin.com/in/)
+- Email: [G-mail](Sanjay@gmail.com)
 
 
 # 🧔🏻 **Vikash Kumar Lal** `Team Lead`
