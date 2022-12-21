@@ -101,7 +101,7 @@ const New = ({ inputs, title }) => {
             />
           </div>
           <div className="right">
-            <form onSubmit={handleAdd}>
+            <form onSubmit={handleAdd} className="form">
               <div className="formInput">
                 <label htmlFor="file">
                   Image: <DriveFolderUploadOutlinedIcon className="icon" />
