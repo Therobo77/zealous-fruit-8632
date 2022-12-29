@@ -1,7 +1,7 @@
 # Sephora.COM  (Clone)
 
 # zealous-fruit-8632  `Project Code`
-vercel link :https://clone-of-sephora-arun-jawlia.vercel.app/
+
 # Robos oF Glossity `Team Name`
 
 ## About Project 
