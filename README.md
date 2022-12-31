@@ -57,6 +57,7 @@ Sephora is a French multinational retailer of personal care and beauty products.
 
 - ### **Integration**
 
+
 ## ✅ **Netlify link** [Click Here To See Magic](https://robos-of-glossity.netlify.app/)
 
 ## 🤝 **_Collaborators_**
